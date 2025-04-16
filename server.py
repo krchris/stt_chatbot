@@ -42,7 +42,7 @@ async def websocket_endpoint(websocket: WebSocket):
 
                 text = transcribe_audio(filename)
                 # Prompting transcribed text
-                print(f"Transcribed text: {text}")
+                print(f"\nTranscribed text: {text}")
                 os.remove(filename)
                 reply = get_chatgpt_response(text)
                 # Prompting ChatGPT reply

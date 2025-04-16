@@ -10,9 +10,7 @@ let isRecording = false;
 const recordBtn = document.getElementById("record-btn");
 
 ws.onmessage = (event) => {
-    console.log(`Server response: ${event.data}`); // debugging
     const data = JSON.parse(event.data);
-    console.log(data); // debugging
     removeTypingIndicator();
     appendMessage('user', data.user);
     appendMessage('gpt', data.gpt);
